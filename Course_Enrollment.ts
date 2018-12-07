@@ -4,6 +4,7 @@ interface Course{
     courseType: CourseType;
     creditHours: number;
     section: Section[];
+    lecturer: Lecturer[];
 }
 
 enum CourseType {
@@ -13,16 +14,31 @@ enum CourseType {
 
 interface Section {
     sectionNumber: number;
-    lecture: Lecturer[];
     studentNumber: number;
-    attendance: Attendance[];
+    attendance: Attendance;
+    appointment: Appointment;
 
 }
 
 interface Attendance{
+    student:Student[];
+}
+
+interface Appointment{
+    lecturer:Lecturer;
+}
+
+
+interface Student{
+    Studentname:string;
+    matrixno:string;
+    email:string;
 
 }
 
 interface Lecturer{
+    lecturername:string;
+    staffno:string;
+    email:string;
 
 }
