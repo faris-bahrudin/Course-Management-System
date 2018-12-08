@@ -1,4 +1,4 @@
-interface Course{
+interface Course {
     courseName: string;
     courseCode: string;
     courseType: CourseType;
@@ -20,25 +20,27 @@ interface Section {
 
 }
 
-interface Attendance{
-    student:Student[];
+interface Attendance {
+    student: Student; // each attendance is tied to a student
+    hasAttended: boolean;
+    attendedDate: Date;
 }
 
-interface Appointment{
-    lecturer:Lecturer;
+interface Appointment {
+    lecturer: Lecturer;
+    courseDetails: Course;
 }
 
-
-interface Student{
-    Studentname:string;
-    matrixno:string;
-    email:string;
+interface Student {
+    studentName: string;
+    matricNum: string;
+    email: string;
 
 }
 
-interface Lecturer{
-    lecturername:string;
-    staffno:string;
-    email:string;
+interface Lecturer {
+    lecturerName: string;
+    staffNum: string;
+    email: string;
 
 }
